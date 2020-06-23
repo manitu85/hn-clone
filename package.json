@@ -1,5 +1,5 @@
 {
-  "name": "39_hakers-news-nextjs",
+  "name": "hakers-news-clone-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "1.4.6"
   }
 }
