@@ -7,8 +7,8 @@ import NProgress from 'nprogress'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/styles/GlobalStyles'
 import { theme } from '@/styles/theme'
-import '@/styles/tailwind.css'
 import 'nprogress/nprogress.css'
+import '@/styles/tailwind.css'
 
 //Binding events
 Router.events.on('routeChangeStart', () => NProgress.start())
