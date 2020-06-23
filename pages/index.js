@@ -1,26 +1,25 @@
 import React from 'react'
 import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
+import StoryList from '@/components/StoryLists.component'
 
 export default ({ stories }) => {
-  console.log('STORIES:', stories)
+  // console.log('STORIESProps:', stories)
 
   if(stories.length === 0) return <Error statusCode={503} />
 
-  const storiesData = data => data.map(story => <h3 key={story.id}>{story.title}</h3>)
-  
   return (
     <>
       <h1>Hakers news next js</h1>
-      <div>
-        {storiesData(stories) }
-      </div>
+      <StoryList stories={stories} />
     </>
   )
 }
 
 export const getServerSideProps = async (context) => {
-  let data;
+  console.log(context)
+  
+  let data
   
   try {
     const res = await fetch('https://node-hnapi.herokuapp.com/news?page=1')
