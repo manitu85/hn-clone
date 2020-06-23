@@ -2,11 +2,9 @@ import styled from 'styled-components'
 
 export const StoryList = styled.div`
   padding: 0 1em;
-  
 `
 export const Story = styled.div`
   padding: .5em 0;
-
 `
 
 export const StoryTitle = styled.h2`
