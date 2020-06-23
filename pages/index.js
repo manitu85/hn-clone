@@ -3,9 +3,10 @@ import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
 import StoryListComponent from '@/components/StoryList.component'
 import Layout from '@/components/Layout.component'
+import Pagination from '@/components/Pagination.component'
 
 
-export default ({ stories }) => {
+export default ({ stories, page }) => {
   // console.log('STORIESProps:', stories)
 
   if(stories.length === 0) return <Error statusCode={503} />
@@ -13,29 +14,32 @@ export default ({ stories }) => {
   return (
     <Layout 
       title='Hacker News Next'
-      description='Hacker News clone made with Next js'
+      description='Hacker News clone made with Next.js'
     >
-      <h1>Hackers news next js</h1>
       <StoryListComponent stories={stories} />
+      <Pagination page={page}/>
     </Layout>
   )
 }
 
-export const getServerSideProps = async (context) => {
-  console.log(context)
+export const getServerSideProps = async ({res, req, query}) => {
+  console.log(query)
   
-  let data
+  let data, page
   
   try {
-    const res = await fetch('https://node-hnapi.herokuapp.com/news?page=1')
+    page = Number(query.page) || 1
+    const res = await fetch(`https://node-hnapi.herokuapp.com/news?page=${page}`)
     data = await res.json()
   } catch(err) {
     console.error(err)
+    // data = []
   }
 
   return {
     props: {
-      stories: data || []
+      stories: data || [],
+      page
     }
   }
 }

@@ -16,7 +16,7 @@ const Layout = ({ children, title, description }) => {
       <TailwindContainer>
         { children }
       </TailwindContainer>
-      <Footer><p>Copyright&copy; Hacker News Next {new Date().getFullYear()}</p></Footer>
+      <Footer><p>Copyright&copy; Hacker News Next.js {new Date().getFullYear()}</p></Footer>
     </>
   )
 }
