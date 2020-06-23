@@ -4,9 +4,10 @@ import {
   Story,
   StoryTitle,
   StoryDetails 
-} from '@/components/StoryLists.styles'
+} from '@/components/StoryList.styles'
 
-const StoryLists = ({ stories }) => {
+
+const StoryListComponent = ({ stories }) => {
   
   return (
     <StoryList>
@@ -31,4 +32,4 @@ const StoryLists = ({ stories }) => {
   )
 }
 
-export default StoryLists
+export default StoryListComponent

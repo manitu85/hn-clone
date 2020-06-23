@@ -1,7 +1,9 @@
 import React from 'react'
 import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
-import StoryList from '@/components/StoryLists.component'
+import StoryListComponent from '@/components/StoryList.component'
+import Layout from '@/components/Layout.component'
+
 
 export default ({ stories }) => {
   // console.log('STORIESProps:', stories)
@@ -9,10 +11,13 @@ export default ({ stories }) => {
   if(stories.length === 0) return <Error statusCode={503} />
 
   return (
-    <>
-      <h1>Hakers news next js</h1>
-      <StoryList stories={stories} />
-    </>
+    <Layout 
+      title='Hacker News Next'
+      description='Hacker News clone made with Next js'
+    >
+      <h1>Hackers news next js</h1>
+      <StoryListComponent stories={stories} />
+    </Layout>
   )
 }
 
@@ -34,3 +39,6 @@ export const getServerSideProps = async (context) => {
     }
   }
 }
+
+
+

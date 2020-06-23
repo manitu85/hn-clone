@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import GlobalStyle from '../styles/GlobalStyles'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import { THEME as theme } from '../styles/theme'
+import '@/styles/tailwind.css'
+
 
 
 const App = props => {
