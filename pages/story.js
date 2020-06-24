@@ -6,9 +6,7 @@ import Layout from '@/components/Layout.component'
 import CommentList from '@/components/CommentList.component'
 
 const Story = ({ story }) =>  {
-
-    console.log('STORY:', story)
-    
+ 
     if (!story) return <Error statusCode={503} />
     
     return (

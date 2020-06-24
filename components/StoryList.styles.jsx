@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Story = styled.div`
-  padding: .3em 0;
+  padding: .4em 0;
 `
 
 export const StoryList = styled.div`
