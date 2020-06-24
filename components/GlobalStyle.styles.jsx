@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     margin: 0 auto;
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.backgroundColor};
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;

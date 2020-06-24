@@ -1,10 +1,10 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet as StyledComponentSheets } from 'styled-components'
+import { ServerStyleSheet as StyledComponentsSheets } from 'styled-components'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const styledComponentSheet = new StyledComponentSheets()   // styled component
+    const styledComponentSheet = new StyledComponentsSheets()   // styled component SSR
     const originalRenderPage = ctx.renderPage
 
     try {
@@ -19,7 +19,7 @@ class MyDocument extends Document {
       // extract the initial props that may be present.
       const initialProps = await Document.getInitialProps(ctx)
 
-      // returning the original props together with our styled components.
+      // returning the original props together with styled components
       return {
         ...initialProps,
         styles: (

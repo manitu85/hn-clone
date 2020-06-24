@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 const Pagination = ({ page }) => (
-  <div className="flex justify-start ml-6 mb-5">
+  <div className="flex justify-start ml-6 mb-5 my-2">
     <Link href={`/?page=${page - 1}`} >
-      <button className="bg-white hover:bg-gray-100 text-gray-800  text-orange-600 font-semibold text-sm py-1 px-5 border border-gray-400 rounded shadow">Prev</button>
+      <button className="bg-white hover:bg-gray-100 text-gray-600  font-semibold text-sm py-1 px-5 border border-gray-400 rounded shadow">Prev</button>
     </Link>
     <Link href={`/?page=${page + 1}`}>
-      <button className="bg-white hover:bg-gray-100 text-gray-800 text-orange-600 font-semibold text-sm py-1 px-5 border border-gray-400 rounded shadow">Next</button>
+      <button className="bg-white hover:bg-gray-100 text-gray-600 font-semibold text-sm py-1 px-5 border border-gray-400 rounded shadow">Next</button>
     </Link>
   </div>
 )

@@ -1,4 +1,3 @@
-import React from 'react'
 import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
 import StoryListComponent from '@/components/StoryList.component'
@@ -16,7 +15,10 @@ export default ({ stories, page }) => {
       title='Hacker News Next'
       description='Hacker News clone made with Next.js'
     >
-      <StoryListComponent stories={stories} />
+      <StoryListComponent 
+        stories={stories} 
+        description='Hacker News Next.js '
+      />
       <Pagination page={page}/>
     </Layout>
   )
@@ -28,17 +30,17 @@ export const getServerSideProps = async ({res, req, query}) => {
   let data, page
   
   try {
-    page = Number(query.page) || 1
+    page = Number(query.page) || 0
     const res = await fetch(`https://node-hnapi.herokuapp.com/news?page=${page}`)
     data = await res.json()
-  } catch(err) {
+  } catch (err) {
     console.error(err)
-    // data = []
+    data = []
   }
 
   return {
     props: {
-      stories: data || [],
+      stories: data,
       page
     }
   }
