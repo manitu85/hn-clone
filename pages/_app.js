@@ -8,8 +8,9 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/components/GlobalStyle.styles'
 import { theme } from 'theme'
 import '@/styles/customButton.css'
-import '@/styles/nprogress.css'
 import '@/styles/index.css'
+// import 'nprogress/nprogress.css'
+import '@/styles/nprogress.css'
 
 //Binding events
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -21,14 +22,13 @@ const App = props => {
   return (
     <React.Fragment>
       <Head>
-        <meta charSet='utf-8' />
-        <link rel="manifest" href="/manifest.json" />
+        {/* <link rel="manifest" href="/manifest.json" /> */}
 
+        <meta charSet='utf-8' />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="hacker-next" />
         <meta name="apple-mobile-web-app-title" content="hacker-next" />
-        <meta name="theme-color" content="#ff6600;" />
         <meta name="msapplication-navbutton-color" content="#ff6600;" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="msapplication-starturl" content="/" />

@@ -4,8 +4,8 @@ const url = require("url")
 const path = require("path")
 
 const port = process.env.PORT || 3000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+// const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev: process.env.NODE_ENV !== 'production' })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
@@ -16,7 +16,7 @@ app.prepare().then(() => {
       const { pathname } = parsedUrl
 
       /* If a service worker requested, serve it as a static file */
-      if (pathname === "/service-worker.js") {
+      if (pathname === "/service-worker.js" || pathname === "/manifest.json") {
         const filePath = path.join(__dirname, ".next", pathname)
         app.serveStatic(req, res, filePath)
 

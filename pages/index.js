@@ -39,7 +39,6 @@ export default ({ stories, page }) => {
 }
 
 export const getServerSideProps = async ({res, req, query}) => {
-  console.log(query)
   
   let data, page
   

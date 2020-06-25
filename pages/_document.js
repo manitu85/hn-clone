@@ -42,6 +42,7 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <link rel="manifest" href="/manifest.json" />
           {this.props.styleTags /*rendering the actually stylesheet*/}
         </Head>
         <body>
