@@ -27,12 +27,12 @@ const Index = ({ stories, page }) => {
 
   return (
     <Layout 
-      title='Hacker News Next'
+      title='Hacker News Next.js'
       description='Hacker News clone made with Next.js'
     >
       <StoryListComponent 
         stories={stories} 
-        description={`Hacker Next - Page ${page + 1}`}
+        description={`Page ${page + 1}`}
       />
       <Pagination page={page}/>
     </Layout>

@@ -9,7 +9,7 @@ import {
   Dot 
 } from '@/components/StoryList.styles'
 import { AiOutlineLike, AiOutlineComment } from 'react-icons/ai'
-import { RiUser5Line, RiUserStarLine } from 'react-icons/ri'
+import { RiUserStarLine } from 'react-icons/ri'
 
 
 const StoryListComponent = ({ stories, description }) => {
@@ -22,18 +22,18 @@ const StoryListComponent = ({ stories, description }) => {
           return (
             <Story key={story.id} >
               <StoryUser> 
-                <RiUserStarLine size={16} color='#9f9f9f' />
+                <RiUserStarLine style={UserIcon} />
                 <span>{story.user}</span>
                 <span>•</span>
                 <span>{story.time_ago}</span>
               </StoryUser>
               <StoryTitle>
-                <a href={story.url}>{story.title}{' '}[ {story.domain} ]</a>
+                <a href={story.url}>{story.title}{' '}[{story.domain}]</a>
               </StoryTitle>
               <StoryDetails>
-                <AiOutlineLike size={16} color='#9f9f9f'/>
+                <AiOutlineLike style={commentIcon} />
                 <span> {story.points || 0} points</span>
-                <AiOutlineComment size={16} color='#9f9f9f'/>
+                <AiOutlineComment style={commentIcon} />
                 <Link href={`/story?id=${story.id}`}>
                   <a>{story.comments_count || 0} comments</a>
                 </Link>
@@ -44,6 +44,16 @@ const StoryListComponent = ({ stories, description }) => {
       }
     </StoryList>
   )
+}
+
+const UserIcon = {
+  fontSize: '12px',
+  color: '#9f9f9f'
+}
+
+const commentIcon = {
+  fontSize: '16px',
+  color: '#9f9f9f'
 }
 
 export default StoryListComponent
