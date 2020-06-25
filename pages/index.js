@@ -32,7 +32,7 @@ const Index = ({ stories, page }) => {
     >
       <StoryListComponent 
         stories={stories} 
-        description={`Page ${page + 1}`}
+        description={`Hacker Next - Page ${page + 1}`}
       />
       <Pagination page={page}/>
     </Layout>

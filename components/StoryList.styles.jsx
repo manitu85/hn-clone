@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Story = styled.div`
   padding: .4em 0;
+  margin-top: 1rem;
 `
 
 export const StoryList = styled.div`
@@ -18,11 +19,15 @@ export const StoryListTitle = styled.div`
 `
 
 export const StoryUser = styled.div`
-  padding-bottom: .4em ;
-  margin-bottom: -15px;
+  padding-bottom: .5em ;
+  margin-bottom: -12px;
+
+  display: flex;
+  align-items: center;
 
   span {
     margin-right: .65em;
+    margin-left: .3em;
     color: #9f9f9f;
     font-size: .65rem;
     letter-spacing: .5px;
@@ -49,13 +54,18 @@ export const StoryDetails = styled.div`
   font-size: .8rem;
   font-weight: bold;
 
+  display: flex;
+  align-items: center;
+
   span {
-    margin-right: 1em;
+    margin-right: 1.25em;
+    margin-left: .3em;
   }
 
   a {
     color: #ff6600;;
     text-decoration: none;
+    margin-left: .3em;
 
      &:hover {
       text-decoration: underline;

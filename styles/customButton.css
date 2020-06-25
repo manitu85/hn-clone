@@ -5,9 +5,9 @@
   transition: right 0.5s;
   cursor: pointer;
   border: 2px solid #f60 !important;
-  /* background-color: #efefee !important; */
-  font-size: 12px;
-  padding: 10px;
+  background-color: #fff !important;
+  font-size: 10px !important;
+  padding: 14px !important;
 }
 
 .buttonTransition {

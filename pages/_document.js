@@ -2,7 +2,7 @@ import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet as StyledComponentsSheets } from 'styled-components'
 
-class MyDocument extends Document {
+class CustomDocument extends Document {
   static async getInitialProps(ctx) {
     const styledComponentSheet = new StyledComponentsSheets()   // styled component SSR
     const originalRenderPage = ctx.renderPage
@@ -55,4 +55,4 @@ class MyDocument extends Document {
 }
 
 
-export default MyDocument
+export default CustomDocument

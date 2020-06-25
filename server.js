@@ -16,7 +16,7 @@ app.prepare()
 
         /* Handle get request If a service worker requested, serve it as a static file */
         if (pathname === '/service-worker.js') {
-          const filePath = join(__dirname, '.next/static', pathname)
+          const filePath = join(__dirname, '.next', pathname)
           app.serveStatic(req, res, filePath)
           /* Otherwise, let Next take care of it */
         } else {
