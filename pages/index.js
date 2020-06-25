@@ -8,20 +8,19 @@ import Pagination from '@/components/Pagination.component'
 
 
 const Index = ({ stories, page }) => {
-  // console.log('STORIESProps:', stories)
-
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then(registration => {
-          console.log('service worker registration successful', registration)
-        })
-        .catch(err => {
-          console.error('service worker registration failed', err.message)
-        })
-    }
-  }, [])
+  // injected directly with next-offline plugin
+  // useEffect(() => {
+  //   if ('serviceWorker' in navigator) {
+  //     navigator.serviceWorker
+  //       .register('/service-worker.js')
+  //       .then(registration => {
+  //         console.log('service worker registration successful', registration)
+  //       })
+  //       .catch(err => {
+  //         console.error('service worker registration failed', err.message)
+  //       })
+  //   }
+  // }, [])
 
   if(stories.length === 0) return <Error statusCode={503} />
 
