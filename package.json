@@ -4,29 +4,32 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
     "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "export": "next export",
     "deploy": "vercel --public"
   },
   "dependencies": {
-    "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "next": "9.4.4",
+    "next-offline": "^5.0.2",
+    "nextjs-progressbar": "^0.0.5",
     "nprogress": "^0.2.0",
     "polished": "^3.6.5",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-scroll-up-button": "^1.6.4",
     "react-typed": "^1.2.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.3",
     "babel-plugin-styled-components": "^1.10.7",
-    "postcss-flexbugs-fixes": "4.2.1",
+    "cross-env": "^7.0.2",
     "postcss-preset-env": "^6.7.0",
-    "sw-precache-webpack-plugin": "^1.0.0",
-    "tailwindcss": "1.4.6"
+    "sw-precache-webpack-plugin": "^1.0.0"
   }
 }

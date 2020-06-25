@@ -2,20 +2,21 @@ import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import Router from 'next/router'
-import NProgress from 'nprogress'
+// import NProgress from 'nprogress'
+import NextNProgress from '@/components/Nprogress.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/components/GlobalStyle.styles'
 import { theme } from 'theme'
 import '@/styles/customButton.css'
 import '@/styles/index.css'
-import 'nprogress/nprogress.css'
 // import '@/styles/nprogress.css'
+// import 'nprogress/nprogress.css'
 
-//Binding events
-Router.events.on('routeChangeStart', () => NProgress.start())
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
+// //Binding events
+// Router.events.on('routeChangeStart', () => NProgress.start())
+// Router.events.on('routeChangeComplete', () => NProgress.done())
+// Router.events.on('routeChangeError', () => NProgress.done())
 
 const App = props => {
   const { Component, pageProps } = props
@@ -43,6 +44,7 @@ const App = props => {
 
       <StyledThemeProvider theme={theme}>
         <GlobalStyle />
+        <NextNProgress />
         <Component {...pageProps} />
       </StyledThemeProvider>
 
