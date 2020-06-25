@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import Router from 'next/router'
-// import NProgress from 'nprogress'
 import NextNProgress from '@/components/Nprogress.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
@@ -10,13 +8,7 @@ import GlobalStyle from '@/components/GlobalStyle.styles'
 import { theme } from 'theme'
 import '@/styles/customButton.css'
 import '@/styles/index.css'
-// import '@/styles/nprogress.css'
-// import 'nprogress/nprogress.css'
 
-// //Binding events
-// Router.events.on('routeChangeStart', () => NProgress.start())
-// Router.events.on('routeChangeComplete', () => NProgress.done())
-// Router.events.on('routeChangeError', () => NProgress.done())
 
 const App = props => {
   const { Component, pageProps } = props
@@ -30,6 +22,7 @@ const App = props => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="hacker-next" />
         <meta name="apple-mobile-web-app-title" content="hacker-next" />
+        <meta name="theme-color" content="#f60" />
         <meta name="msapplication-navbutton-color" content="#ff6600;" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="msapplication-starturl" content="/" />

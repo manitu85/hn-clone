@@ -1,11 +1,7 @@
 {
-  "name": "Hacker News Next.js SSR",
+  "name": "hacker news next.js ssr",
   "short_name": "hacker-next",
-  "lang": "en-US",
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#ff6600;",
-  "background_color": "#efefef;",
+  "description": "nextjs using service worker via next-offline",
   "icons": [
     {
       "src": "/icons/icon-512x512.png",
@@ -17,5 +13,11 @@
       "sizes": "192x192",
       "type": "png"
     }
-  ]
+  ],
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff6600",
+  "background_color": "#ffffff"
 }
+

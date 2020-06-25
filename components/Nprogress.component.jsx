@@ -1,18 +1,31 @@
-import React from 'react';
-import NProgress from 'nprogress';
-import Router from "next/router";
-import PropTypes from 'prop-types';
+import React from 'react'
+import NProgress from 'nprogress'
+import Router from "next/router"
+import PropTypes from 'prop-types'
 
-/* eslint-disable react/prefer-stateless-function */
+
 class NextNProgress extends React.Component {
+
   static defaultProps = {
-    color: '#29D',
+    color:  '#ff6600',
     startPosition: 0.3,
     stopDelayMs: 200,
     height: 3,
-  };
+  }
 
-  timer = null;
+  componentDidMount() {
+    const { options } = this.props
+
+    if (options) {
+      NProgress.configure(options)
+    }
+
+    Router.events.on('routeChangeStart', this.routeChangeStart)
+    Router.events.on('routeChangeComplete', this.routeChangeEnd)
+    Router.events.on('routeChangeError', this.routeChangeEnd)
+  }
+
+  timer = null
 
   routeChangeStart = () => {
     NProgress.set(this.props.startPosition);
@@ -31,7 +44,7 @@ class NextNProgress extends React.Component {
 
     return (
       <style jsx global>{`
-        #nprogress {
+        #nprogress {s
           pointer-events: none;
         }
         #nprogress .bar {
@@ -59,12 +72,12 @@ class NextNProgress extends React.Component {
           display: "block";
           position: fixed;
           z-index: 1031;
-          top: 15px;
+          top: 20px;
           right: 15px;
         }
         #nprogress .spinner-icon {
-          width: 18px;
-          height: 18px;
+          width: 25px;
+          height: 25px;
           box-sizing: border-box;
           border: solid 2px transparent;
           border-top-color: ${color};
@@ -82,35 +95,17 @@ class NextNProgress extends React.Component {
           position: absolute;
         }
         @-webkit-keyframes nprogress-spinner {
-          0% {
-            -webkit-transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(360deg);
-          }
+          0%   { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
         }
         @keyframes nprogress-spinner {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
+          0%   { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
       `}</style>);
   }
 
-  componentDidMount() {
-    const { options } = this.props;
-
-    if (options) {
-      NProgress.configure(options);
-    }
-
-    Router.events.on('routeChangeStart', this.routeChangeStart);
-    Router.events.on('routeChangeComplete', this.routeChangeEnd);
-    Router.events.on('routeChangeError', this.routeChangeEnd);
-  }
+  
 }
 
 NextNProgress.propTypes = {
@@ -120,4 +115,4 @@ NextNProgress.propTypes = {
   options: PropTypes.object,
 };
 
-export default NextNProgress;
+export default NextNProgress
