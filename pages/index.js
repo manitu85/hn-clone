@@ -8,11 +8,12 @@ import Pagination from '@/components/Pagination.component'
 
 
 const Index = ({ stories, page }) => {
+  
   // injected directly with next-offline plugin
   // useEffect(() => {
   //   if ('serviceWorker' in navigator) {
   //     navigator.serviceWorker
-  //       .register('/service-worker.js')
+  //       .register('/service-worker.js', { scope: '/' }))
   //       .then(registration => {
   //         console.log('service worker registration successful', registration)
   //       })
