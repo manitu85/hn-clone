@@ -1,0 +1,15 @@
+.buttonContainer {
+  position: fixed;
+  right: 2% !important;
+  bottom: 27px !important;
+  transition: right 0.5s;
+  cursor: pointer;
+  border: 2px solid #f60 !important;
+  /* background-color: #efefee !important; */
+  font-size: 20px;
+  padding: 10px;
+}
+
+.buttonTransition {
+  right: 20px;
+}

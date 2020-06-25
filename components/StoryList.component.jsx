@@ -5,7 +5,8 @@ import {
   StoryListTitle,
   StoryTitle,
   StoryUser,
-  StoryDetails 
+  StoryDetails,
+  Dot 
 } from '@/components/StoryList.styles'
 
 
@@ -19,11 +20,12 @@ const StoryListComponent = ({ stories, description }) => {
           return (
             <Story key={story.id} >
               <StoryUser>
-                <span>{story.user}</span>{' '}
+                <span>{story.user}</span>
+                <span>•</span>
                 <span>{story.time_ago}</span>
               </StoryUser>
               <StoryTitle>
-                <a href={story.url}>{story.title}{' '}({story.domain})</a>
+                <a href={story.url}>{story.title}{' '}[ {story.domain} ]</a>
               </StoryTitle>
               <StoryDetails>
                 <span>{story.points || 0} points</span>

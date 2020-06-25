@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
 import StoryListComponent from '@/components/StoryList.component'
@@ -7,6 +8,19 @@ import Pagination from '@/components/Pagination.component'
 
 export default ({ stories, page }) => {
   // console.log('STORIESProps:', stories)
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          console.log('service worker registration successful', registration)
+        })
+        .catch(err => {
+          console.warn('service worker registration failed', err.message)
+        })
+    }
+  }, [])
 
   if(stories.length === 0) return <Error statusCode={503} />
 

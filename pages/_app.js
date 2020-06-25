@@ -7,6 +7,7 @@ import NProgress from 'nprogress'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/components/GlobalStyle.styles'
 import { theme } from 'theme'
+import '@/styles/customButton.css'
 import '@/styles/nprogress.css'
 import '@/styles/index.css'
 

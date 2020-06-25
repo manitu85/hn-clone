@@ -9,7 +9,6 @@ const Layout = ({ children, title, description }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
       </Head>
       <Navigation />
@@ -17,21 +16,20 @@ const Layout = ({ children, title, description }) => {
         { children }
       </TailwindContainer>
       <Footer><p> Copyright&copy;{new Date().getFullYear()}{' '}
-      <ReactTyped
-          loop
-          typeSpeed={90}
-          backSpeed={60}
-          strings={
-            ["Hacker News Next.js SSR", "by Alex Burke"]}
-          smartBackspace
-          shuffle={false}
-          backDelay={1}
-          fadeOut={false}
-          fadeOutDelay={100}
-          loopCount={0}
-          showCursor
-          cursorChar="_"
-        />
+        <ReactTyped
+            loop
+            showCursor
+            typeSpeed={90}
+            backSpeed={60}
+            strings={["Hacker News Next.js SSR", "by Alex Burke"]}
+            smartBackspace
+            shuffle={false}
+            backDelay={1}
+            fadeOut={false}
+            fadeOutDelay={100}
+            loopCount={0}
+            cursorChar="_"
+          />
         </p></Footer>
     </>
   )

@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "start": "next start"
+    "deploy": "vercel --public"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "next": "9.4.4",
     "nprogress": "^0.2.0",
     "polished": "^3.6.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-scroll-up-button": "^1.6.4",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.1"
   },

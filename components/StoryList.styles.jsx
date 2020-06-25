@@ -22,7 +22,7 @@ export const StoryUser = styled.div`
   margin-bottom: -15px;
 
   span {
-    margin-right: 1em;
+    margin-right: .65em;
     color: #9f9f9f;
     font-size: .65rem;
     letter-spacing: .5px;
@@ -54,7 +54,6 @@ export const StoryDetails = styled.div`
   }
 
   a {
-    /* color: #6600ff; */
     color: #ff6600;;
     text-decoration: none;
 
@@ -63,3 +62,4 @@ export const StoryDetails = styled.div`
     }
   }
 `
+
