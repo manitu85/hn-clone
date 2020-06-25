@@ -15,8 +15,6 @@ const App = props => {
   return (
     <React.Fragment>
       <Head>
-        {/* <link rel="manifest" href="/manifest.json" /> */}
-
         <meta charSet='utf-8' />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,6 +30,8 @@ const App = props => {
         <link rel="apple-touch-icon" type="png" sizes="512x512" href="/icons/icon-512x512.png" />
         <link rel="icon" type="png" sizes="192x192" href="/icons/icon-192x192.png" />
         <link rel="apple-touch-icon" type="png" sizes="192x192" href="/icons/icon-192x192.png" />
+        <link rel="icon" type="png" sizes="144x144" href="/icons/icon-144x144.png" />
+        <link rel="apple-touch-icon" type="png" sizes="144x144" href="/icons/icon-144x144.png" />
         <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap' rel='stylesheet' />
       </Head>
 
