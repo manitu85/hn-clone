@@ -4,7 +4,8 @@ export const lightTheme = {
   header: '#202020',
   footer: '#ff6600',
   progress: '#ff6600',
-  toogle: '#ff8534'
+  toogle: '#ff8534',
+  linkColor: '#edf2f7'
 }
 
 export const darkTheme = {
@@ -13,6 +14,7 @@ export const darkTheme = {
   header: '#ff6600',
   footer: '#2f2f2f;',
   progress: '#edf2f7',
-  toogle: '#fafafa'
+  toogle: '#fafafa',
+  linkColor: '#edf2f7'
 }
 

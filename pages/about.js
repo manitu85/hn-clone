@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout.component";
+import Layout from "hoc/Layout.component";
 
 const About = () => (
   <Layout

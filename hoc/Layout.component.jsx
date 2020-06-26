@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Navigation from '@/components/Navigation.component'
 import ReactTyped from 'react-typed'
-import { TailwindContainer, Footer } from '@/components/Layout.styles'
+import { TailwindContainer, Footer } from 'hoc/Layout.styles'
 
 
 const Layout = ({ children, title, description }) => {

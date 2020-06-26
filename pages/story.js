@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
-import Layout from '@/components/Layout.component'
+import Layout from 'hoc/Layout.component'
 import CommentList from '@/components/CommentList.component'
 import { Main, StoryTitle, StoryDetails } from '@/components/Story.styles'
 

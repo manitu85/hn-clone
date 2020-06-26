@@ -3,7 +3,7 @@ import Error from 'next/error'
 import fetch from 'isomorphic-fetch'
 
 import StoryListComponent from '@/components/StoryList.component'
-import Layout from '@/components/Layout.component'
+import Layout from 'hoc/Layout.component'
 import Pagination from '@/components/Pagination.component'
 
 

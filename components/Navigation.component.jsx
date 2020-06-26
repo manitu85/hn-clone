@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
-import styled from 'styled-components'
+import StyledLink from '@/hoc/StyledLink.styles'
+import { Nav } from "@/components/Navigation.styles";
 import Toggle from '@/components/ThemeToogler.component'
 import ThemeContext from '@/hooks/ThemeContext'
 
@@ -24,15 +25,9 @@ const Navigation = () => {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex">
-                <Link href="/">
-                  <a  className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white  transition duration-150 ease-in-out">Hacker News</a>
-                </Link>
-                <Link href="/about">
-                  <a  className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300  transition duration-150 ease-in-out">About</a>
-                </Link>
-                <Link href="/contact">
-                  <a className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300  transition duration-150 ease-in-out">Contact</a>
-                </Link>
+                <StyledLink href="/">Hacker News</StyledLink>
+                <StyledLink href="/about">About</StyledLink>
+                <StyledLink href="/contact">Contact</StyledLink>
             </div>
           </div>
         </div>
@@ -49,15 +44,7 @@ const Navigation = () => {
 
 
 
-// Experimental feature: tailwind classes with styled component
-export const Nav = styled.nav`
-  background-color: ${({ theme }) => theme.header };
-  position: fixed; 
-  top: 0;
-  right: 0; 
-  left: 0;
-  transition: all .6s ease-in;
-`
+
 
 export default Navigation
 

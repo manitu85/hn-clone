@@ -11,10 +11,8 @@ const Button = styled.button`
   font-size: 1.6rem;
   padding: 0.4rem; 
   float: right;
-  transition: all .6s ease-in-out;
-  
+  transition: all .75s ease-in-out;
 `
-
 
 const Toggle = ({theme,  toggleTheme }) => (
   <Button onClick={toggleTheme} >
