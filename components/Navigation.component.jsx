@@ -43,9 +43,6 @@ const Navigation = () => {
 }
 
 
-
-
-
 export default Navigation
 
 // useContext for theme to pass state, avoid props drilling

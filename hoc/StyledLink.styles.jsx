@@ -44,7 +44,7 @@ export default styled(StyledLink)`
   }
 `
 
-// Usage
+// Usage -  resolve problem with dynamic routing
 // import StyledLink from '.@/hoc/StyledLink'
 
 //  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
