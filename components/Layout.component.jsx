@@ -5,6 +5,7 @@ import { TailwindContainer, Footer } from '@/components/Layout.styles'
 
 
 const Layout = ({ children, title, description }) => {
+  
   return (
     <>
       <Head>
@@ -12,7 +13,7 @@ const Layout = ({ children, title, description }) => {
         <meta name="description" content={description} />
       </Head>
       <Navigation />
-      <TailwindContainer >
+      <TailwindContainer>
         { children }
       </TailwindContainer>
       <Footer><p> Copyright&copy;{new Date().getFullYear()}{' '}

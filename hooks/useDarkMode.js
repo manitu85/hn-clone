@@ -10,7 +10,8 @@ const useDarkMode = () => {
     setTheme(mode)
   }
 
-  const themeToggler = () => theme === 'light' ? setMode('dark') : setMode('light')
+  const isLight = theme === 'light'
+  const themeToggler = () => isLight ? setMode('dark') : setMode('light')
   
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme')

@@ -2,7 +2,7 @@ import React from 'react'
 import useDarkMode from '@/hooks/useDarkMode'
 import ThemeContext from '@/hooks/ThemeContext'
 import Head from 'next/head'
-import PropTypes from 'prop-types'
+import { elementType, object} from 'prop-types'
 import NextNProgress from '@/components/Nprogress.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
@@ -30,7 +30,7 @@ const App = props => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="hacker-next" />
         <meta name="apple-mobile-web-app-title" content="hacker-next" />
-        <meta name="theme-color" content="#f60" />
+        <meta name="theme-color" content="#ff6600" />
         <meta name="msapplication-navbutton-color" content="#ff6600;" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="msapplication-starturl" content="/" />
@@ -47,8 +47,8 @@ const App = props => {
 
       <StyledThemeProvider theme={themeMode} >
         <GlobalStyle />
-        <NextNProgress />
-        <ThemeContext.Provider value={[theme, themeToggler]}> 
+        {themeMode && <NextNProgress />}
+        <ThemeContext.Provider value={{theme, themeToggler}}> 
           <Component {...pageProps}  />  
         </ThemeContext.Provider>
       </StyledThemeProvider>
@@ -60,8 +60,8 @@ const App = props => {
 export default App
 
 App.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
+  Component: elementType.isRequired,
+  pageProps: object.isRequired,
 }
 
 // pass state to navigation via context, avoid props drillings

@@ -1,10 +1,10 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet as StyledComponentsSheets } from 'styled-components'
+import { ServerStyleSheet as StyledComponentsSheet } from 'styled-components'
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
-    const styledComponentSheet = new StyledComponentsSheets()   // styled component SSR
+    const styledComponentSheet = new StyledComponentsSheet()   // styled component SSR
     const originalRenderPage = ctx.renderPage
 
     try {
