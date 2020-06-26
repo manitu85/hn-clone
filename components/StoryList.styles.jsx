@@ -39,10 +39,12 @@ export const StoryTitle = styled.h2`
   font-weight: 300;
   margin: 0;
   /* margin-bottom: .4em; */
+   transition: all .6s ease-in;
 
   a {
     color: ${({ theme }) => theme.text };
     text-decoration: none;
+     transition: all .6s ease-in;
 
     &:hover {
       text-decoration: underline;

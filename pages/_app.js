@@ -1,9 +1,9 @@
 import React from 'react'
 import useDarkMode from '@/hooks/useDarkMode'
+import ThemeContext from '@/hooks/ThemeContext'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import NextNProgress from '@/components/Nprogress.component'
-import Toggle from '@/components/ThemeToogler.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/components/GlobalStyle.styles'
@@ -48,7 +48,9 @@ const App = props => {
       <StyledThemeProvider theme={themeMode} >
         <GlobalStyle />
         <NextNProgress />
-        <Component {...pageProps} themeToggler={themeToggler} theme={theme} />  
+        <ThemeContext.Provider value={[theme, themeToggler]}>
+          <Component {...pageProps}  />  
+        </ThemeContext.Provider>
       </StyledThemeProvider>
 
     </React.Fragment>
@@ -61,3 +63,5 @@ App.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 }
+
+// add layout wrapper to <Component>

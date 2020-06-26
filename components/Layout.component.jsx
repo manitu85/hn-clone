@@ -11,10 +11,7 @@ const Layout = ({ children, title, description, theme, themeToggler }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <Navigation 
-        themeToggler={themeToggler}
-        theme={theme}
-      />
+      <Navigation />
       <TailwindContainer >
         { children }
       </TailwindContainer>

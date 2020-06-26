@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     font-size: 1.6rem;
     min-height: 100vh;
-    transition: all 0.50s linear;
+    transition: all .6s ease-in;
   }
 `
 

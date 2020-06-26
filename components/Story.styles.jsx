@@ -9,11 +9,12 @@ export const StoryTitle = styled.h1`
   margin: 0;
   font-weight: 300;
   padding-bottom: 0.5em;
+  transition: all .6s ease-in;
 
   a {
     color: ${({ theme }) => theme.text };
     text-decoration: none;
-    transition: all .3s ease-in;
+    transition: all .6s ease-in;
  
     &:hover {
       text-decoration: underline;

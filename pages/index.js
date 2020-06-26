@@ -29,8 +29,6 @@ const Index = ({ stories, page, themeToggler, theme }) => {
     <Layout 
       title='Hacker News Next.js'
       description='Hacker News clone made with Next.js'
-      themeToggler={themeToggler} 
-      theme={theme}
     >
       <StoryListComponent 
         stories={stories} 
