@@ -48,7 +48,7 @@ const App = props => {
       <StyledThemeProvider theme={themeMode} >
         <GlobalStyle />
         <NextNProgress />
-        <ThemeContext.Provider value={[theme, themeToggler]}>
+        <ThemeContext.Provider value={[theme, themeToggler]}> 
           <Component {...pageProps}  />  
         </ThemeContext.Provider>
       </StyledThemeProvider>
@@ -64,4 +64,4 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 }
 
-// add layout wrapper to <Component>
+// pass state to navigation via context, avoid props drillings

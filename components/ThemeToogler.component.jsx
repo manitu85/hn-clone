@@ -1,7 +1,7 @@
 import React from 'react'
 import { func, string } from 'prop-types'
 import styled from 'styled-components'
-import { lightTheme } from 'theme'
+import { darkTheme } from 'theme'
 
 const Button = styled.button`
   background: ${({ theme }) => theme.footer};
@@ -16,7 +16,7 @@ const Button = styled.button`
 `
 
 const Toggle = ({theme,  toggleTheme }) => <Button onClick={toggleTheme} >
-  {theme === 'light' ? 'Light mode' : 'Night mode'}</Button>
+  {theme === 'dark' ? 'Light mode' : 'Night mode'}</Button>
 
 
 Toggle.propTypes = {

@@ -7,7 +7,7 @@ import Layout from '@/components/Layout.component'
 import Pagination from '@/components/Pagination.component'
 
 
-const Index = ({ stories, page, themeToggler, theme }) => {
+const Index = ({ stories, page }) => {
   
   // injected directly with next-offline plugin
   // useEffect(() => {

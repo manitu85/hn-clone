@@ -4,7 +4,7 @@ import ReactTyped from 'react-typed'
 import { TailwindContainer, Footer } from '@/components/Layout.styles'
 
 
-const Layout = ({ children, title, description, theme, themeToggler }) => {
+const Layout = ({ children, title, description }) => {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ const Layout = ({ children, title, description, theme, themeToggler }) => {
             showCursor
             typeSpeed={90}
             backSpeed={60}
-            strings={["Hacker News Next.js SSR", "by Alex Burke"]}
+            strings={["Hacker News Next.js SSR/PWA", "by Alex Burke"]}
             smartBackspace
             shuffle={false}
             backDelay={1}
