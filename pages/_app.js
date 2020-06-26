@@ -1,17 +1,27 @@
 import React from 'react'
+import useDarkMode from '@/hooks/useDarkMode'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import NextNProgress from '@/components/Nprogress.component'
+import Toggle from '@/components/ThemeToogler.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import GlobalStyle from '@/components/GlobalStyle.styles'
-import { theme } from 'theme'
+import { lightTheme, darkTheme } from 'theme'
 import '@/styles/customButton.css'
 import '@/styles/index.css'
 
 
 const App = props => {
+
+  const [theme, themeToggler, mountedComponent] = useDarkMode()
+
+  const themeMode = theme === 'light' ? lightTheme : darkTheme
+  
+  if (!mountedComponent) return <div />
+
   const { Component, pageProps } = props
+
   return (
     <React.Fragment>
       <Head>
@@ -35,10 +45,10 @@ const App = props => {
         <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap' rel='stylesheet' />
       </Head>
 
-      <StyledThemeProvider theme={theme}>
+      <StyledThemeProvider theme={themeMode} >
         <GlobalStyle />
         <NextNProgress />
-        <Component {...pageProps} />
+        <Component {...pageProps} themeToggler={themeToggler} theme={theme} />  
       </StyledThemeProvider>
 
     </React.Fragment>

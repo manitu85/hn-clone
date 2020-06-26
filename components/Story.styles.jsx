@@ -11,7 +11,7 @@ export const StoryTitle = styled.h1`
   padding-bottom: 0.5em;
 
   a {
-    color: #333;
+    color: ${({ theme }) => theme.text };
     text-decoration: none;
     transition: all .3s ease-in;
  

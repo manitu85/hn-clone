@@ -12,7 +12,7 @@ export const Footer = styled.footer`
   width: 100%;
   text-align: center;
   padding: 1rem 0;
-  background-color: #ff6600;
+  background-color: ${({ theme}) => theme.footer };
   color: #fefefe;
   font-size: .8rem;
   font-weight: bold;

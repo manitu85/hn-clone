@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import styled from 'styled-components'
+import Toggle from '@/components/ThemeToogler.component'
 
-const Navigation = () => (
-  <nav className="bg-gray-800" style={{ position: 'fixed', top: 0, right: 0, left: 0 }}>
+const Navigation = ({ theme, themeToggler}) => (
+  <Nav>
     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 container">
       <div className="relative flex items-center justify-between h-16">
         <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -24,22 +26,29 @@ const Navigation = () => (
               <Link href="/contact">
                 <a className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Contact</a>
               </Link>
-            </div>
           </div>
         </div>
       </div>
+      <Toggle
+        theme={theme} 
+        toggleTheme={themeToggler} 
+      />
+      </div>
     </div>
-  </nav>
+  </Nav>
 )
 
 
+// Experimental feature: tailwind classes with styled component
+export const Nav = styled.nav`
+  background-color: ${({ theme }) => theme.header };
+  position: fixed; 
+  top: 0;
+  right: 0; 
+  left: 0;
+  /* // ...rest of rules */
+`
+
 export default Navigation
 
-// Examples
-// const links = [
-//   { href: "https://zeit.co/now", label: "ZEIT" },
-//   { href: "https://github.com/zeit/next.js", label: "GitHub" }
-// ].map(link => {
-//   link.key = `nav-link-${link.href}-${link.label}`;
-//   return link;
-// });
+// useContext for theme to pass state, avoid props drilling

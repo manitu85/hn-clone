@@ -15,14 +15,17 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     margin: 0 auto;
-    color: ${({ theme }) => theme.colors.primary};
-    background-color: ${({ theme }) => theme.colors.backgroundColor};
+    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.body};
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     font-size: 1.6rem;
     min-height: 100vh;
+    transition: all 0.50s linear;
   }
 `
 
 export default GlobalStyle
+
+

@@ -7,7 +7,7 @@ import Layout from '@/components/Layout.component'
 import Pagination from '@/components/Pagination.component'
 
 
-const Index = ({ stories, page }) => {
+const Index = ({ stories, page, themeToggler, theme }) => {
   
   // injected directly with next-offline plugin
   // useEffect(() => {
@@ -29,6 +29,8 @@ const Index = ({ stories, page }) => {
     <Layout 
       title='Hacker News Next.js'
       description='Hacker News clone made with Next.js'
+      themeToggler={themeToggler} 
+      theme={theme}
     >
       <StoryListComponent 
         stories={stories} 

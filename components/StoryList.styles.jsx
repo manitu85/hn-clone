@@ -41,7 +41,7 @@ export const StoryTitle = styled.h2`
   /* margin-bottom: .4em; */
 
   a {
-    color: #333;
+    color: ${({ theme }) => theme.text };
     text-decoration: none;
 
     &:hover {
