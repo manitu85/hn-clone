@@ -21,11 +21,26 @@ export default styled(StyledLink)`
   &:hover {
     color: lightgrey;
   }
-  
+
   &:focus {
     color: ${({theme}) => theme.linkColor };
     outline: none;
     border: 0;
+  }
+
+  &::after {
+      content: "";
+      position: relative;
+      top: 1.25rem;
+      display: block;
+      height: .25rem;
+      background-color: #d6d6d6;
+      width: 0;
+      transition: all 500ms ease;
+  }
+
+  &:hover::after {
+      width: 100%;
   }
 `
 
