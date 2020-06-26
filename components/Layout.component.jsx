@@ -21,11 +21,11 @@ const Layout = ({ children, title, description }) => {
             loop
             showCursor
             typeSpeed={90}
-            backSpeed={60}
-            strings={["Hacker News Next.js SSR/PWA", "by Alex Burke"]}
+            backSpeed={70}
+            strings={["Hacker News Clone Next.js SSR/PWA", "by Alex Burke"]}
             smartBackspace
             shuffle={false}
-            backDelay={1}
+            backDelay={1000}
             fadeOut={false}
             fadeOutDelay={100}
             loopCount={0}

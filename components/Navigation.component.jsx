@@ -57,7 +57,6 @@ export const Nav = styled.nav`
   right: 0; 
   left: 0;
   transition: all .6s ease-in;
-  /* // ...rest of rules */
 `
 
 export default Navigation

@@ -1,8 +1,6 @@
 export const lightTheme = {
   body: '#edf2f7',
-  text: '#0f0f0c',
-  toggleBorder: '#FFF',
-  background: '#363537',
+  text: '#2f2f2f',
   header: '#202020',
   footer: '#ff6600',
   progress: '#ff6600',
@@ -12,14 +10,9 @@ export const lightTheme = {
 export const darkTheme = {
   body: '#202020',
   text: '#fafafa',
-  toggleBorder: '#6B8096',
-  background: '#999',
   header: '#ff6600',
   footer: '#2f2f2f;',
-  progress: '#fafafa',
+  progress: '#edf2f7',
   toogle: '#fafafa'
 }
 
-
-// #2f2f2f;
-// #171717

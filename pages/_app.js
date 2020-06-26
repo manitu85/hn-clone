@@ -16,6 +16,8 @@ const App = props => {
 
   const [theme, themeToggler, mountedComponent] = useDarkMode()
 
+  const isDark = theme === 'dark'
+
   const themeMode = theme === 'light' ? lightTheme : darkTheme
   
   if (!mountedComponent) return <div />
@@ -47,7 +49,12 @@ const App = props => {
 
       <StyledThemeProvider theme={themeMode} >
         <GlobalStyle />
-        {themeMode && <NextNProgress />}
+        {themeMode && <NextNProgress 
+          color={isDark ? '#edf2f7' : '#ff6600' }
+          options={{ trickleSpeed: 50 }}
+          showAfterMs={300}
+          spinner
+        />}
         <ThemeContext.Provider value={{theme, themeToggler}}> 
           <Component {...pageProps}  />  
         </ThemeContext.Provider>
