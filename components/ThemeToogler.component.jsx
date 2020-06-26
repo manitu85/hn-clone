@@ -15,7 +15,8 @@ const Button = styled.button`
   float: right;
 `
 
-const Toggle = ({theme,  toggleTheme }) => <Button onClick={toggleTheme} >{theme === 'light' ? 'Day theme' : 'Night theme'}</Button>
+const Toggle = ({theme,  toggleTheme }) => <Button onClick={toggleTheme} >
+  {theme === 'light' ? 'Light mode' : 'Night mode'}</Button>
 
 
 Toggle.propTypes = {
