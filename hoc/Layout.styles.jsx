@@ -11,7 +11,7 @@ export const TailwindContainer = styled.div.attrs(props => ({
 export const Footer = styled.footer`
   width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   background-color: ${({ theme}) => theme.footer };
   color: #fefefe;
   font-size: .8rem;
