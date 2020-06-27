@@ -48,5 +48,5 @@ export default styled(StyledLink)`
 // import StyledLink from '.@/hoc/StyledLink'
 
 //  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-//    First post
+//    Page
 //  </StyledLink>

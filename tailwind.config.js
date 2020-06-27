@@ -19,6 +19,11 @@ module.exports = {
       letterSpacing: {
         tighter: '-.04em',
       },
+      spacing: {
+        '12': '3rem',
+        '16': '4rem',
+        '20': '5rem',
+      },
       lineHeight: {
         tight: 1.2,
       },
