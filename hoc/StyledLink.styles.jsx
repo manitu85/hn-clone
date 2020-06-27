@@ -11,7 +11,7 @@ export default styled(StyledLink)`
   margin: 0 auto;
   padding: .6em;
   text-transform: uppercase;
-  font-size: .45em;
+  font-size: .435em;
   color: ${({theme}) => theme.linkColor };
   text-decoration: none;
   font-weight: 600;

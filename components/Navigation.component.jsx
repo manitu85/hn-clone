@@ -23,15 +23,12 @@ const Navigation = () => {
                 <img className="hidden lg:block h-8 w-auto" src="/logo/hn-logo.png" alt="hacker-news logo" />
               </Link>
             </div>
-            <div className="hidden sm:block">
               <div className="ml-6 flex items-center">
                 <StyledLink href="/">Hacker News</StyledLink>
                 <StyledLink href="/about">About</StyledLink>
-                <StyledLink href="/contact">Contact</StyledLink>
-                <StyledLink href="/login">Login</StyledLink>
-            </div>
+                <StyledLink href="/register">Register</StyledLink>
+              </div>
           </div>
-        </div>
           <Toggle
             theme={theme}
             toggleTheme={themeToggler}
