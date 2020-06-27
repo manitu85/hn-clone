@@ -23,11 +23,12 @@ const Navigation = () => {
                 <img className="hidden lg:block h-8 w-auto" src="/logo/hn-logo.png" alt="hacker-news logo" />
               </Link>
             </div>
-            <div className="hidden sm:block sm:ml-6">
+            <div className="hidden sm:block">
               <div className="ml-6 flex items-baseline">
                 <StyledLink href="/">Hacker News</StyledLink>
                 <StyledLink href="/about">About</StyledLink>
                 <StyledLink href="/contact">Contact</StyledLink>
+                <StyledLink href="/login">Login</StyledLink>
             </div>
           </div>
         </div>

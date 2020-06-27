@@ -12,6 +12,7 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        orange: '#ff6600'
       },
       spacing: {
         28: '7rem',
@@ -26,6 +27,13 @@ module.exports = {
       },
       lineHeight: {
         tight: 1.2,
+      },
+      minHeight: {
+        '0': '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '90%',
       },
       fontSize: {
         '5xl': '2.5rem',

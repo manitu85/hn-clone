@@ -9,9 +9,9 @@ const StyledLink = ({ as, children, className, href }) => (
 
 export default styled(StyledLink)`
   margin: 0 auto;
-  padding: .45em;
+  padding: .6em;
   text-transform: uppercase;
-  font-size: .5em;
+  font-size: .45em;
   color: ${({theme}) => theme.linkColor };
   text-decoration: none;
   font-weight: 600;
@@ -19,7 +19,7 @@ export default styled(StyledLink)`
   cursor: pointer;
 
   &:hover {
-    color: lightgrey;
+    color: #efefef;
   }
 
   &:focus {
@@ -31,10 +31,10 @@ export default styled(StyledLink)`
   &::after {
       content: "";
       position: relative;
-      top: 1.25rem;
+      top: 1.35rem;
       display: block;
       height: .2rem;
-      background-color: #d6d6d6;
+      background-color: #efefef;
       width: 0;
       transition: all 500ms ease;
   }
