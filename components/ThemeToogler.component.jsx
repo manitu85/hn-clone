@@ -1,8 +1,8 @@
 import React from 'react'
 import { func, string } from 'prop-types'
 import styled from 'styled-components'
-import { RiSunLine, RiMoonClearLine } from 'react-icons/ri';
-import { darkTheme } from 'theme'
+import { RiSunLine, RiMoonClearLine } from 'react-icons/ri'
+// import { darkTheme } from 'theme'
 
 const Button = styled.button`
   background: transparent;

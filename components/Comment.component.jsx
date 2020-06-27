@@ -1,17 +1,14 @@
 import { 
   CommentWrapper, 
   CommentUser, 
-  NestedComment 
+  NestedComment,
+  CommentContent
 } from '@/components/Comment.styles'
 
 const Comment = ({ comment }) => (
-  
   <CommentWrapper>
     <CommentUser>{comment.user}</CommentUser>
-    <div
-      className="comment-content"
-      dangerouslySetInnerHTML={{ __html: comment.content }}
-    />
+    <CommentContent dangerouslySetInnerHTML={{ __html: comment.content }} />
     {
       comment.comments && (
       <NestedComment>
@@ -20,26 +17,7 @@ const Comment = ({ comment }) => (
         ))}
       </NestedComment>)
     }
-
-    <style jsx>{`
-      .comment-content {
-        font-size: 0.9rem;
-      }
-      .comment-content :global(p) {
-        margin: 0;
-        margin-bottom: 0.5em;
-        word-wrap: break-word;
-      }
-      .comment-content :global(a) {
-        color: #f60;
-        text-decoration: underline;
-      }
-      .comment-content :global(pre) {
-        max-width: 100%;
-        overflow: scroll;
-      }
-    `}</style>
   </CommentWrapper>
-);
+)
 
 export default Comment

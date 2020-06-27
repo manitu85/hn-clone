@@ -75,3 +75,13 @@ export const StoryDetails = styled.div`
   }
 `
 
+export const userIcon = {
+  fontSize: '12px',
+  color: '#9f9f9f'
+}
+
+export const commentIcon = {
+  fontSize: '16px',
+  color: '#9f9f9f'
+}
+

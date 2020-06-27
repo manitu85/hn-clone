@@ -1,7 +1,7 @@
 import React from 'react'
 import NProgress from 'nprogress'
 import Router from "next/router"
-import PropTypes from 'prop-types'
+import { string, number, object } from 'prop-types'
 
 
 class NextNProgress extends React.Component {
@@ -109,10 +109,10 @@ class NextNProgress extends React.Component {
 }
 
 NextNProgress.propTypes = {
-  color: PropTypes.string,
-  startPosition: PropTypes.number,
-  stopDelayMs: PropTypes.number,
-  options: PropTypes.object,
+  color: string,
+  startPosition: number,
+  stopDelayMs: number,
+  options: object,
 };
 
 export default NextNProgress

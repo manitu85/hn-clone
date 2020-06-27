@@ -13,18 +13,18 @@ export const CommentUser = styled.div`
 export const CommentContent = styled.div`
   font-size: 0.9rem;
 
-  p {
+  p:global {
     margin: 0;
     margin-bottom: 0.5em;
     word-wrap: break-word;
   }
 
-  a {
+  a:global {
     color: #f60;
     text-decoration: underline;
   }
 
-  pre {
+  pre:global {
     max-width: 100%;
     overflow: scroll;
   }
@@ -35,3 +35,23 @@ export const NestedComment = styled.div`
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 1em;
 `
+
+
+{/* <style jsx>{`
+      .comment-content {
+        font-size: 0.9rem;
+      }
+      .comment-content :global(p) {
+        margin: 0;
+        margin-bottom: 0.5em;
+        word-wrap: break-word;
+      }
+      .comment-content :global(a) {
+        color: #f60;
+        text-decoration: underline;
+      }
+      .comment-content :global(pre) {
+        max-width: 100%;
+        overflow: scroll;
+      }
+    `}</style> */}

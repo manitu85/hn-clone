@@ -1,8 +1,8 @@
 import React from 'react'
-import useDarkMode from '@/hooks/useDarkMode'
-import ThemeContext from '@/hooks/ThemeContext'
 import Head from 'next/head'
 import { elementType, object} from 'prop-types'
+import useDarkMode from '@/hooks/useDarkMode'
+import ThemeContext from '@/hooks/ThemeContext'
 import NextNProgress from '@/components/Nprogress.component'
 
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
