@@ -24,7 +24,7 @@ const Navigation = () => {
               </Link>
             </div>
             <div className="hidden sm:block">
-              <div className="ml-6 flex items-baseline">
+              <div className="ml-6 flex items-center">
                 <StyledLink href="/">Hacker News</StyledLink>
                 <StyledLink href="/about">About</StyledLink>
                 <StyledLink href="/contact">Contact</StyledLink>
