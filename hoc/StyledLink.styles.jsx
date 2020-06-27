@@ -9,7 +9,7 @@ const StyledLink = ({ as, children, className, href }) => (
 
 export default styled(StyledLink)`
   margin: 0 auto;
-  padding: .4em;
+  padding: .45em;
   text-transform: uppercase;
   font-size: .5em;
   color: ${({theme}) => theme.linkColor };

@@ -12,6 +12,7 @@ const Button = styled.button`
   padding: 0.4rem; 
   float: right;
   transition: all .75s ease-in-out;
+  transform: translateY(2px);
 `
 
 const Toggle = ({theme,  toggleTheme }) => (
