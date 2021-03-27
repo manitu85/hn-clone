@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { AiOutlineLike, AiOutlineComment } from 'react-icons/ai'
-import { RiUserStarLine } from 'react-icons/ri'
+import Link from "next/link";
+import { AiOutlineLike, AiOutlineComment } from "react-icons/ai";
+import { RiUserStarLine } from "react-icons/ri";
 import {
   Story,
   StoryList,
@@ -9,25 +9,28 @@ import {
   StoryUser,
   StoryDetails,
   userIcon,
-  commentIcon
-} from '@/components/StoryList.styles'
+  commentIcon,
+} from "@/components/StoryList.styles";
 
+const StoryListComponent = ({ stories, description }) => {
+  console.log(`stories`, stories);
 
-const StoryListComponent = ({ stories, description }) => (
-  <StoryList>
-    <StoryListTitle>{description}</StoryListTitle>
-    {
-      stories.map(story => {
+  return (
+    <StoryList>
+      <StoryListTitle>{description}</StoryListTitle>
+      {stories.map((story) => {
         return (
-          <Story key={story.id} >
-            <StoryUser> 
+          <Story key={story.id}>
+            <StoryUser>
               <RiUserStarLine style={userIcon} />
               <span>{story.user}</span>
               <span>•</span>
               <span>{story.time_ago}</span>
             </StoryUser>
             <StoryTitle>
-              <a href={story.url}>{story.title}{' '}[{story.domain}]</a>
+              <a href={story.url}>
+                {story.title} [{story.domain}]
+              </a>
             </StoryTitle>
             <StoryDetails>
               <AiOutlineLike style={commentIcon} />
@@ -38,15 +41,10 @@ const StoryListComponent = ({ stories, description }) => (
               </Link>
             </StoryDetails>
           </Story>
-        )
-      })
-    }
-  </StoryList>
-)
+        );
+      })}
+    </StoryList>
+  );
+};
 
-
-export default StoryListComponent
-
-
-
-
+export default StoryListComponent;

@@ -1,64 +1,63 @@
-import React, { useEffect } from 'react'
-import Error from 'next/error'
-import fetch from 'isomorphic-fetch'
+import React, { useState, useEffect } from "react";
+import Error from "next/error";
+import axios from "axios";
 
-import StoryListComponent from '@/components/StoryList.component'
-import Layout from 'hoc/Layout.component'
-import Pagination from '@/components/Pagination.component'
-
+import StoryListComponent from "@/components/StoryList.component";
+import Layout from "hoc/Layout.component";
+import Pagination from "@/components/Pagination.component";
+import { HN_API } from "@/lib/hnApi";
 
 const Index = ({ stories, page }) => {
-  
-  if(stories.length === 0) return <Error statusCode={503} />
+  console.log(`data`, stories);
+
+  if (stories.length === 0) return <Error statusCode={503} />;
 
   return (
-    <Layout 
-      title='Hacker News Next.js'
-      description='Hacker News clone made with Next.js'
+    <Layout
+      title="Hacker News Next.js"
+      description="Hacker News clone made with Next.js"
     >
-      <StoryListComponent 
-        stories={stories} 
-        description={`Page ${page + 1}`}
-      />
-      <Pagination page={page}/>
+      <StoryListComponent stories={stories} description={`Page ${page + 1}`} />
+      <Pagination page={page} />
     </Layout>
-  )
-}
+  );
+};
 
-export const getServerSideProps = async ({res, req, query}) => {
-  
-  let data, page
-  
+export const getServerSideProps = async ({ _, req, query }) => {
+  let res, page;
+  console.log(`query`, query);
+
   try {
-    page = Number(query.page) || 0
-    const res = await fetch(`https://node-hnapi.herokuapp.com/news?page=${page}`)
-    data = await res.json()
+    page = Number(query.page) || 0;
+    res = await axios.get(`${HN_API}/news?${page}`);
+    console.log(`respnse`, res.data);
   } catch (err) {
-    console.error(err)
-    data = []
+    console.error(err);
+    res = null;
   }
 
   return {
     props: {
-      stories: data,
-      page
-    }
-  }
-}
+      stories: res.data,
+      page,
+    },
+  };
+};
 
-export default Index
+export default Index;
 
- // injected directly with next-offline plugin
-  // useEffect(() => {
-  //   if ('serviceWorker' in navigator) {
-  //     navigator.serviceWorker
-  //       .register('/service-worker.js', { scope: '/' }))
-  //       .then(registration => {
-  //         console.log('service worker registration successful', registration)
-  //       })
-  //       .catch(err => {
-  //         console.error('service worker registration failed', err.message)
-  //       })
-  //   }
-  // }, [])
-
+// const [data, setData] = useState(null);
+// console.log(`data`, data);
+// // if (stories.length === 0) return <Error statusCode={503} />;
+// useEffect(() => {
+//   const fetcher = async () => {
+//     let page = Number(page) || 0;
+//     const res = await fetch(`https://api.hackerwebapp.com/news?${page}`, {
+//       method: "GET",
+//       headers: { "content-type": "application/json" },
+//     });
+//     const data = await res.json();
+//     setData(data);
+//   };
+//   fetcher();
+// }, []);
