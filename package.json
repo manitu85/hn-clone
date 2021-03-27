@@ -23,6 +23,7 @@
     "react-scroll-up-button": "^1.6.4",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.1",
+    "swr": "^0.5.4",
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
