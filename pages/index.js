@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import useSWR from "swr";
-import Error from "next/error";
+// import Error from "next/error";
 
 import StoryListComponent from "@/components/StoryList.component";
 import Layout from "hoc/Layout.component";
 import Pagination from "@/components/Pagination.component";
 import fetcher from "@/lib/fetcher";
+import { HN_API } from "@/lib/hnApi";
 
 const Index = ({ stories, page }) => {
   // cached data
@@ -15,7 +16,7 @@ const Index = ({ stories, page }) => {
 
   console.log(`data`, stories);
 
-  if (stories.length === 0) return <Error statusCode={503} />;
+  // if (stories.length === 0) return <Error statusCode={503} />;
 
   return (
     <Layout
@@ -31,7 +32,7 @@ const Index = ({ stories, page }) => {
 export const getServerSideProps = async ({ _, req, query }) => {
   const page = Number(query.page) || 1;
   // so this `fetcher` function will be executed on the server-side.
-  const data = await fetcher(`${process.env.HN_API}/news?page=${page}`);
+  const data = await fetcher(`${HN_API}/news?page=${page}`);
 
   return {
     props: {
