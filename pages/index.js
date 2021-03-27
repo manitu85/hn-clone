@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Error from "next/error";
-import axios from "axios";
 import useSWR from "swr";
-import { HN_API } from "@/lib/hnApi";
+import Error from "next/error";
 
 import StoryListComponent from "@/components/StoryList.component";
 import Layout from "hoc/Layout.component";
