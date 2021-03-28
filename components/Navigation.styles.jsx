@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.header};
-  position: fixed; 
+  position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   left: 0;
-  transition: all .6s ease-in;
-`
+  transition: all 0.2s ease;
+`;

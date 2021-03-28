@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Story = styled.div`
-  padding: .4em 0;
+  padding: 0.4em 0;
   margin-top: 1rem;
-`
+`;
 
 export const StoryList = styled.div`
   padding: 0 1em;
-`
+`;
 
 export const StoryListTitle = styled.div`
   font-size: 1.8rem;
@@ -15,45 +15,44 @@ export const StoryListTitle = styled.div`
   font-weight: 300;
   color: #9f9f9f;
   margin-bottom: -1rem;
-  
-`
+`;
 
 export const StoryUser = styled.div`
-  padding-bottom: .5em ;
+  padding-bottom: 0.5em;
   margin-bottom: -12px;
 
   display: flex;
   align-items: center;
 
   span {
-    margin-right: .65em;
-    margin-left: .3em;
+    margin-right: 0.65em;
+    margin-left: 0.3em;
     color: #9f9f9f;
-    font-size: .65rem;
-    letter-spacing: .5px;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
   }
-`
+`;
 
 export const StoryTitle = styled.h2`
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
   /* margin-bottom: .4em; */
-   transition: all .6s ease-in;
+  transition: all 0.6s ease-in;
 
   a {
-    color: ${({ theme }) => theme.text };
+    color: ${({ theme }) => theme.text};
     text-decoration: none;
-     transition: all .6s ease-in;
+    transition: all 0.2s ease;
 
     &:hover {
       text-decoration: underline;
     }
   }
-`
+`;
 
 export const StoryDetails = styled.div`
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
 
   display: flex;
@@ -61,27 +60,26 @@ export const StoryDetails = styled.div`
 
   span {
     margin-right: 1.25em;
-    margin-left: .3em;
+    margin-left: 0.3em;
   }
 
   a {
-    color: #ff6600;;
+    color: #ff6600;
     text-decoration: none;
-    margin-left: .3em;
+    margin-left: 0.3em;
 
-     &:hover {
+    &:hover {
       text-decoration: underline;
     }
   }
-`
+`;
 
 export const userIcon = {
-  fontSize: '12px',
-  color: '#9f9f9f'
-}
+  fontSize: "12px",
+  color: "#9f9f9f",
+};
 
 export const commentIcon = {
-  fontSize: '16px',
-  color: '#9f9f9f'
-}
-
+  fontSize: "16px",
+  color: "#9f9f9f",
+};

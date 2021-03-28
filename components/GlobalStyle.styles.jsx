@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -8,12 +8,12 @@ const GlobalStyle = createGlobalStyle`
   *:before,
   *:after {box-sizing: inherit; }
 
-  html { 
-    box-sizing: border-box; 
-    font-size: 100%; 
+  html {
+    box-sizing: border-box;
+    font-size: 100%;
     /* font-size: 62.5%;  */
   }
-  
+
   body {
     margin: 0 auto;
     color: ${({ theme }) => theme.text};
@@ -23,9 +23,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     font-size: 1.6rem;
     min-height: 100vh;
-    transition: all .6s ease-in;
+    transition: all .2s ease;
   }
-`
+`;
 
-export default GlobalStyle
-
+export default GlobalStyle;

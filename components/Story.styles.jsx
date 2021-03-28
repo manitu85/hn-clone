@@ -1,34 +1,32 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Main = styled.main`
-  padding: 1em;  
-`
+  padding: 1em;
+`;
 
 export const StoryTitle = styled.h1`
   font-size: 1.2rem;
   margin: 0;
   font-weight: 300;
   padding-bottom: 0.5em;
-  transition: all .6s ease-in;
+  transition: all 0.6s ease-in;
 
   a {
-    color: ${({ theme }) => theme.text };
+    color: ${({ theme }) => theme.text};
     text-decoration: none;
-    transition: all .6s ease-in;
- 
+    transition: all 0.2s ease;
+
     &:hover {
       text-decoration: underline;
     }
-    
+
     span {
       color: rgb(113, 128, 150);
       font-size: 14px;
-      padding: 0px 6px
+      padding: 0px 6px;
     }
-
-  } 
-
-`
+  }
+`;
 
 export const StoryDetails = styled.div`
   font-size: 0.8rem;
@@ -43,4 +41,4 @@ export const StoryDetails = styled.div`
   a {
     color: #f60;
   }
-`
+`;
