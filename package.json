@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "vercel --public"
+    "deploy": "vercel --public",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "axios": "^0.21.1",
