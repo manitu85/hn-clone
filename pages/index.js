@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useSWR from "swr";
 // import Error from "next/error";
 
+// Story Item Component rename it
 import StoryListComponent from "@/components/StoryList.component";
 import Layout from "hoc/Layout.component";
 import Pagination from "@/components/Pagination.component";
