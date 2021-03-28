@@ -33,9 +33,15 @@ export const getServerSideProps = async ({ _, req, query }) => {
   // so this `fetcher` function will be executed on the server-side.
   const data = await fetcher(`${HN_API}/news?page=${page}`);
 
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
-      stories: data || [],
+      stories: data,
       page,
     },
   };
