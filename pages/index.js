@@ -9,7 +9,7 @@ import { HN_API } from "@/lib/hnApi";
 
 const HomePage = ({ stories, page }) => {
   // cached data on client side
-  const { data } = useSWR(`${HN_API}/news?page=${page}`, fetcher, {
+  const { data } = useSWR(`$/news?page=${page}`, fetcher, {
     initialData: stories,
   });
 
