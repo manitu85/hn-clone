@@ -1,13 +1,12 @@
 import axios from "axios";
 import Link from "next/link";
-import Error from "next/error";
 import Layout from "hoc/Layout.component";
 import CommentList from "@/components/CommentList.component";
 import { Main, StoryTitle, StoryDetails } from "@/components/Story.styles";
 import { HN_API } from "@/lib/hnApi";
 
 const Story = ({ story }) => {
-  if (!story) return <Error statusCode={503} />;
+  if (!story) return <div>There is no story</div>;
 
   return (
     <Layout title={story.title}>
