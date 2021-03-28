@@ -31,7 +31,7 @@ const HomePage = ({ stories, page }) => {
 export const getServerSideProps = async ({ _, req, query }) => {
   const page = Number(query.page) || 1;
   // so this `fetcher` function will be executed on the server-side.
-  const data = await fetcher(`${HN_API}/news?page=${page}`);
+  const data = await fetcher(`${process.env.HN_API}/news?page=${page}`);
 
   if (!data) {
     return {
