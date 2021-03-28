@@ -20,10 +20,6 @@ const App = (props) => {
 
   if (!mountedComponent) return <div />;
 
-  // const { data, error } = useSwr(key, fetcher, {
-  //   initialData: props.dataFromServerSideProps,
-  // });
-
   const { Component, pageProps } = props;
 
   return (

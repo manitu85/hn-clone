@@ -13,7 +13,7 @@ import {
 } from "@/components/StoryList.styles";
 
 const StoryListComponent = ({ stories, description }) => {
-  console.log(`stories`, stories);
+  // console.log(`stories`, stories);
 
   return (
     <StoryList>

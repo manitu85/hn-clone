@@ -14,7 +14,7 @@ const HomePage = ({ stories, page }) => {
   });
 
   // console.log(`data`, stories);
-
+  // if (stories.length === 0) return <Error statusCode={503} />;
   if (stories.length === 0) return <div>There is no story</div>;
 
   return (

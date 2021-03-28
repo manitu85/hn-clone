@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Pagination = ({ page }) => {
-  console.log(`page`, page);
+  // console.log(`page`, page);
   return (
     <div className="flex justify-start ml-6 mb-5 my-5">
       <Link href={`/?page=${page - 1}`}>
