@@ -43,7 +43,7 @@ export const getServerSideProps = async ({ _, req, query }) => {
 
   try {
     const storyId = query.id;
-    res = await axios.get(`https://api.hackerwebapp.com/item/${storyId}`);
+    res = await axios.get(`${HN_API}/item/${storyId}`);
   } catch (err) {
     console.error(err);
     res = null;
